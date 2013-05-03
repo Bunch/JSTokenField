@@ -98,6 +98,8 @@ NSString *const JSDeletedTokenKey = @"JSDeletedTokenKey";
     
     frame.origin.y += HEIGHT_PADDING;
     frame.size.height -= HEIGHT_PADDING * 2;
+    frame.origin.x += WIDTH_PADDING;
+    frame.size.width -= WIDTH_PADDING * 2;
     _textField = [[JSBackspaceReportingTextField alloc] initWithFrame:frame];
     [_textField setDelegate:self];
     [_textField setBorderStyle:UITextBorderStyleNone];
@@ -298,6 +300,7 @@ NSString *const JSDeletedTokenKey = @"JSDeletedTokenKey";
 	}
 	
 	textFieldFrame.origin.y += HEIGHT_PADDING;
+    textFieldFrame.origin.x += WIDTH_PADDING;
 	[_textField setFrame:textFieldFrame];
 	CGRect selfFrame = [self frame];
 	selfFrame.size.height = textFieldFrame.origin.y + textFieldFrame.size.height + HEIGHT_PADDING;
