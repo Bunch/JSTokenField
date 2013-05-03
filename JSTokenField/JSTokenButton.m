@@ -38,14 +38,14 @@
 @synthesize representedObject = _representedObject;
 @synthesize parentField = _parentField;
 
-+ (JSTokenButton *)tokenWithString:(NSString *)string representedObject:(id)obj
++ (JSTokenButton *)tokenWithString:(NSString *)string representedObject:(id)obj andFont:(UIFont *)font
 {
 	JSTokenButton *button = (JSTokenButton *)[self buttonWithType:UIButtonTypeCustom];
 	[button setNormalBg:[[UIImage imageNamed:@"tokenNormal.png"] stretchableImageWithLeftCapWidth:14 topCapHeight:0]];
 	[button setHighlightedBg:[[UIImage imageNamed:@"tokenHighlighted.png"] stretchableImageWithLeftCapWidth:14 topCapHeight:0]];
 	[button setAdjustsImageWhenHighlighted:NO];
 	[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-	[[button titleLabel] setFont:[UIFont fontWithName:@"Helvetica Neue" size:15]];
+	[[button titleLabel] setFont:font];
 	[[button titleLabel] setLineBreakMode:UILineBreakModeTailTruncation];
 	[button setTitleEdgeInsets:UIEdgeInsetsMake(2, 10, 0, 10)];
 	

@@ -225,7 +225,7 @@ NSString *const JSDeletedTokenKey = @"JSDeletedTokenKey";
 
 - (JSTokenButton *)tokenWithString:(NSString *)string representedObject:(id)obj
 {
-	JSTokenButton *token = [JSTokenButton tokenWithString:string representedObject:obj];
+	JSTokenButton *token = [JSTokenButton tokenWithString:string representedObject:obj andFont:_textField.font];
 	CGRect frame = [token frame];
 	
 	if (frame.size.width > self.frame.size.width)

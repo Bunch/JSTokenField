@@ -49,6 +49,6 @@
 
 @property (nonatomic, assign) JSTokenField *parentField;
 
-+ (JSTokenButton *)tokenWithString:(NSString *)string representedObject:(id)obj;
++ (JSTokenButton *)tokenWithString:(NSString *)string representedObject:(id)obj andFont:(UIFont *)font;
 
 @end
